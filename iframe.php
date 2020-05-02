@@ -75,7 +75,7 @@ $contentArr[] =  $content2_2;
 $contentArr[] = $content3;
 $contentArr[] = $content3_2;
 $contentArr[] = $content3_3;
-echo '<p>&nbsp;</p><p>&nbsp;</p><br>'
+echo '<p>&nbsp;</p><p>&nbsp;</p><br>';
 $contentlign= '<center>';
 $contentlignAnd= '</center>';
 foreach ($contentArr as $a){
