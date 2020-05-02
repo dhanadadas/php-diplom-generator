@@ -3,125 +3,86 @@
     /* Скрипт предназначен для того, чтобы получить
     от пользователя информацию и поместить ее на страницу 
 	
-	Сделано на скорую руку за 30 минут, ради развлечения*/
+	Сделано на скорую руку за 30 минут, ради развлечения. 
+	Можно провести рефакторинг,	но это не вписалось в лимит 30 минут*/
 
-    var nam = prompt ("Напишите ТЕМУ ДИПЛОМНОЙ РАБОТЫ","");
-    var name = prompt ("Теперь напишите пожалуйста ту же тему дипломной работы в родительном падеже и с маленькой буквы","тут напитите");
+    var nam = prompt ("Напишите ТЕМУ ДИПЛОМНОЙ РАБОТЫ","Проблематика написания дипломных проектов");
+    var name = prompt ("Теперь напишите пожалуйста ту же тему дипломной работы в родительном падеже и с маленькой буквы","проблематики написания дипломных проектов");
 
 </SCRIPT>
-    <p>
-    </p>
-    <p align="center">
-        <b>Содержание</b>
-    </p>
-    <p align="left">
-        Введение
-    </p>
+    <link rel="stylesheet" type="text/css" href="iframe.css" />
 <?php
-$align= '<center>';
-$align2= '</center>';
+echo '<p></p><p align="center"><b>Содержание</b></p><p align="left">Введение</p>';
+// формируем содержание
 
- $a1='   <p>
+ $content1='   <p>
         1 Методологические и нормативные правовые основы <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT>
     </p>';
 
-  $a1_1=' <p>
+  $content1_1=' <p>
     1.1 Теоретическая основа <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT>
     </p>';
-   $a1_2='   <p>
+   $content1_2='   <p>
         1.2 Практика применение <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT> в Российской федерации.
     </p>';
-   $a1_3='   <p>
+   $content1_3='   <p>
         1.3 Практика реализации <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT> зарубежом
     </p>';
-   $a2='   <p>
+   $content2='   <p>
         2 <SCRIPT LANGUAGE="javascript">document.write(nam);</SCRIPT> в жизни общества.
     </p>';
-   $a2_1='   <p>
+   $content2_1='   <p>
         2.1 <SCRIPT LANGUAGE="javascript">document.write(nam);</SCRIPT> как фактор развития общества.
     </p>';
-    $a2_2='  <p>
+    $content2_2='  <p>
         2.2 Социальные и образовательные аспекты <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT>.
     </p>';
-   $a3='   <p>
+   $content3='   <p>
         3 Анализ <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT>.
     </p>';
-    $a3_1='  <p>
+    $content3_1='  <p>
         3.1 Аналитика тематики <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT>.
     </p>';
-    $a3_2='  <p>
+    $content3_2='  <p>
         3.2 <SCRIPT LANGUAGE="javascript">document.write(nam);</SCRIPT> в нашем федеральном округе.
     </p>';
-    $a3_3='  <p>
+    $content3_3='  <p>
         3.3. Совершенствование <SCRIPT LANGUAGE="javascript">document.write(name);</SCRIPT>.
     </p>';
-   $a_z='   <p align="left">
+   $content_z='   <p align="left">
         Заключение
     </p>';
-   $a_b='   <p align="left">
+   $content_b='   <p align="left">
         Библиографический список
     </p>';
-   $a_p='   <p align="left">
+   $content_p='   <p align="left">
         Приложения
     </p>';
-$a0='<p>
+$content0='<p>
         &nbsp;
     </p>';
-echo $a1 . $a1_1 . $a1_2 . $a1_3 . $a2 . $a2_1 . $a2_2 . $a3 .$a3_1. $a3_2.$a3_3.$a_z.$a_b.$a_p.$a0.$a0.$a0.$a0.$a0.$a0.$a0.$a0;
-$ar=[];
-$ar[]= $a1;
-  $ar[] = $a1_1;
-  $ar[] =  $a1_2;
-  $ar[] = $a1_3;
-  $ar[] =$a2;
-  $ar[] =$a2_1;
-  $ar[] =  $a2_2;
-  $ar[] = $a3;
-  $ar[] = $a3_2;
-  $ar[] = $a3_3;
-?>
-
-    <p>
-        &nbsp;
-    </p>
-    <p>
-        &nbsp;
-    </p>
-    <p>
-        &nbsp;
-    </p>
-    <p>
-        &nbsp;
-
-    </p>
-    <p>
-        &nbsp;
-    </p>
-    <p>
-        &nbsp;
-    </p>
-    <p>
-        &nbsp;
-    </p>
-    <p>
-        &nbsp;
-    </p>
-    <br>
-<style type="text/css">
-
-    iframe {
-
-        border : 0px;
-
-    }
-
-</style>
-<?php
-foreach ($ar as $a){
+	// выводим содержание
+echo $content1 . $content1_1 . $content1_2 . $content1_3 . $content2 . $content2_1 . $content2_2 . $content3 .$content3_1. $content3_2.$content3_3.$content_z.$content_b.$content_p.$content0.$content0.$content0.$content0.$content0.$content0.$content0.$content0;
+$contentArr=[];
+// помещаем все это добро в массив для дальнейшего вывода циклом
+$contentArr[]= $content1;
+$contentArr[] = $content1_1;
+$contentArr[] =  $content1_2;
+$contentArr[] = $content1_3;
+$contentArr[] =$content2;
+$contentArr[] =$content2_1;
+$contentArr[] =  $content2_2;
+$contentArr[] = $content3;
+$contentArr[] = $content3_2;
+$contentArr[] = $content3_3;
+echo '<p>&nbsp;</p><p>&nbsp;</p><br>'
+$contentlign= '<center>';
+$contentlignAnd= '</center>';
+foreach ($contentArr as $a){
     echo '<br><br><br>';
-    echo $align;
+    echo $contentlign;
     echo $a;
-    echo $align2;
+    echo $contentlignAnd;
 
     $d=5;
     $x=0;
@@ -130,6 +91,5 @@ foreach ($ar as $a){
         $x++;
     }
 };
-
-
 ?>
+

@@ -6,10 +6,14 @@
     <meta name="description" content="По мотивам написания дипломной работы или как написать выпускную работу за 10 секунд: Забавный проект для генерации типичной выпускной работы под любую тему. " />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css" />
+
   </head>
 <body>
-<div style="width: 770px; padding-top: 180px; padding-left: 290px">
-    <iframe src=/iframe.php width="770" height="700" align=left></iframe>
+<div style="width: 800px; padding-top: 180px; padding-left: 290px">
+    <iframe id="ifr" src=/iframe.php width="790" height="600" align=left></iframe>
+  <script>
+    top.document.getElementById('ifr').height = document.body.scrollHeight-300;
+  </script>
 </div>
   </body>
 </html>

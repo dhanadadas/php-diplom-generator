@@ -1,6 +1,3 @@
-
-<SCRIPT LANGUAGE="javascript">
-
     // проверяем на поддержку современного XMLHttpRequest
     var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
     // создаём новый объект XMLHttpRequest
@@ -39,4 +36,3 @@
     };
     // отправляем запрос
     xhr.send();
-</SCRIPT>
